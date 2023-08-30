@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Merriweather:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  /* memberi background gambar */
+  background-image: url(image/zuppa.jpg); 
+  background-size: cover;
+}
+
+.container {
+    /* mewarnai background */
+  background-color: rgb(199, 197, 163);  
+  /* agar elemen didalamnya dapat diatur secara fleksibel */
+  display: flex;
+  /* agar elemen didalam nya secara */
+  flex-direction: column;
+  /* agar elemen didalam nya menjadi rata tengah */
+  align-items: center;
+  /* agar setiap elemen memiliki jarak 20px */
+  gap: 20px;
+  /* agar membentuk sudut pada element ini */
+  border-radius: 6px;
+  /* memberi batas jarak dalam antara konten dengan sisi luar */
+  padding: 1rem;
+}
+
+.item {
+    background-color: coral;
+    /* memberikan jarak padding 1rem untuk top dan bottom, 10rem untuk right dan left */
+    padding: 1rem 10rem;/* 1 rem = 16 px */
+    width: 100%;
+    text-align: center;
+    /* memberikan icon jari telunjuk ketika kursor diatas element ini */
+    cursor: pointer; 
+    /* memberikan transisi agar smooth */
+    transition: all 0.3s eas;
+}
+
+.item:hover {
+    background-color: rgb(220, 120, 83);
+    /* memberikan efek transformasi */
+    transform: translateY(5px);
+}
+
+.item a{
+    text-decoration: none;
+    color: beige;
+    font-size: 1rem 3rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .item {
+        padding: 1rem 3rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
